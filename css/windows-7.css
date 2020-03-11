@@ -1,0 +1,139 @@
+/*
+style based on
+https://www.howtogeek.com/wp-content/uploads/2009/11/Delete.png
+*/
+
+@font-face {
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Segoe UI'), url('../fonts/segoe-ui.woff') format('woff');
+}
+
+.win7 .dialog {
+    min-height: 100px;
+    border-radius: 8px;
+    margin: auto;
+    padding: 5px;
+    position: relative;
+    font-family: "Segoe UI";
+
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d3f6fe+0,94c4fe+49,d3f6fe+100 */
+    background: rgb(211, 246, 254); /* Old browsers */
+    background: -moz-linear-gradient(left, rgba(211, 246, 254, 1) 0%, rgba(148, 196, 254, 1) 49%, rgba(211, 246, 254, 1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(211, 246, 254, 1) 0%, rgba(148, 196, 254, 1) 49%, rgba(211, 246, 254, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(211, 246, 254, 1) 0%, rgba(148, 196, 254, 1) 49%, rgba(211, 246, 254, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d3f6fe', endColorstr='#d3f6fe', GradientType=1); /* IE6-9 */
+}
+
+
+.win7 .dialog, .win7 .dialog .body, .win7 .dialog .header .x {
+    border: 1px solid #52565a;
+}
+
+.win7 .dialog .header {
+    background: transparent;
+    height: 25px;
+    margin-top: -3px;
+    color: #52565a;
+    padding-left: 5px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.win7 .dialog .header .title {
+    text-shadow: -1px 3px 10px rgba(255, 255, 255, 0.61), 2px 0 8px #FFF;
+}
+
+
+.win7 .dialog .header .x {
+    width: 46px;
+    height: 17px;
+    position: absolute;
+    top: 0;
+    right: 5px;
+    /* image from http://www.soyos.net/tl_files/demos/Windows-7-UI-and-Windows-Aero-for-Websites/*/
+    background: url(../images/windows-7-btn-close.png) 0px 38px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+
+/*  == X in pure CSS == */
+
+.win7.pure-css  .dialog .header .x:before {
+    content: '✕';
+}
+
+.win7.pure-css  .dialog .header .x {
+    width: 44px;
+    height: 16px;
+    position: absolute;
+    top: 0;
+    right: 5px;
+    font-size: 12px;
+    font-weight: 900;
+    text-align: center;
+    color: white;
+    box-shadow: inset 0 0 5px 0px white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f7c4bb+0,f76877+6,f43c51+52,b71a20+54,f43c51+92,fc96a1+100 */
+    background: rgb(247, 196, 187); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(247, 196, 187, 1) 0%, rgba(247, 104, 119, 1) 6%, rgba(244, 60, 81, 1) 52%, rgba(183, 26, 32, 1) 54%, rgba(244, 60, 81, 1) 92%, rgba(252, 150, 161, 1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(247, 196, 187, 1) 0%, rgba(247, 104, 119, 1) 6%, rgba(244, 60, 81, 1) 52%, rgba(183, 26, 32, 1) 54%, rgba(244, 60, 81, 1) 92%, rgba(252, 150, 161, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(247, 196, 187, 1) 0%, rgba(247, 104, 119, 1) 6%, rgba(244, 60, 81, 1) 52%, rgba(183, 26, 32, 1) 54%, rgba(244, 60, 81, 1) 92%, rgba(252, 150, 161, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7c4bb', endColorstr='#fc96a1', GradientType=0); /* IE6-9 */
+}
+
+.win7 .dialog .body {
+    background-color: #f0f0f0;
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.win7 .dialog .body .text {
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.win7 .dialog .text p {
+    margin: 10px;
+}
+
+.win7 .dialog .body .buttons {
+    text-align: right;
+    font-size: .9em;
+}
+
+.win7 .dialog .body .button {
+    display: inline-block;
+    text-align: center;
+    width: 90px;
+    margin: 5px;
+    padding: 2px 0;
+    border-radius: 3px;
+    border: 1px solid #6d6d6d;
+
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,f1f1f1+50,e1e1e1+53,e0e0e0+81,f6f6f6+100 */
+    background: rgb(255, 255, 255); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(241, 241, 241, 1) 50%, rgba(225, 225, 225, 1) 53%, rgba(224, 224, 224, 1) 81%, rgba(246, 246, 246, 1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(241, 241, 241, 1) 50%, rgba(225, 225, 225, 1) 53%, rgba(224, 224, 224, 1) 81%, rgba(246, 246, 246, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(241, 241, 241, 1) 50%, rgba(225, 225, 225, 1) 53%, rgba(224, 224, 224, 1) 81%, rgba(246, 246, 246, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6', GradientType=0); /* IE6-9 */
+
+}
+
+.win7 .dialog .body .button-ok {
+    border-color: #0a6db7;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f7fdff+1,dbecf6+33,b8e3fb+53,b8e3fb+87,dbecf6+100 */
+    background: rgb(247, 253, 255); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(247, 253, 255, 1) 1%, rgba(219, 236, 246, 1) 33%, rgba(184, 227, 251, 1) 53%, rgba(184, 227, 251, 1) 87%, rgba(219, 236, 246, 1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(247, 253, 255, 1) 1%, rgba(219, 236, 246, 1) 33%, rgba(184, 227, 251, 1) 53%, rgba(184, 227, 251, 1) 87%, rgba(219, 236, 246, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(247, 253, 255, 1) 1%, rgba(219, 236, 246, 1) 33%, rgba(184, 227, 251, 1) 53%, rgba(184, 227, 251, 1) 87%, rgba(219, 236, 246, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7fdff', endColorstr='#dbecf6', GradientType=0); /* IE6-9 */
+
+}

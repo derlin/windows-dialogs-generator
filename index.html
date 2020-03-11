@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Windows Dialog Generator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <style type="text/css">
+        body {
+            box-sizing: content-box;
+            font-family: Roboto, Arial, sans-serif;
+        }
+
+        #app {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+    </style>
+    <link href="css/base.css" rel="stylesheet">
+    <link href="css/windows-xp.css" rel="stylesheet">
+    <link href="css/windows-7.css" rel="stylesheet">
+    <link href="css/dunno.css" rel="stylesheet">
+</head>
+<body>
+
+
+<div id="app" v-bind:class="style">
+    <h1>Windows dialog Generator</h1>
+    <h2>Choose your style and content</h2>
+    <p>
+        <select v-model="style" style="width: 100%">
+            <option value="win7">Style: Windows 7</option>
+            <option value="winxp">Style: Windows XP</option>
+            <option value="dunno">Style: Dunno</option>
+        </select>
+    </p>
+    <div class="customize dialog">
+        <div class="header" v-on:click="collapsed = !collapsed">Customize (click to toggle)</div>
+        <transition v-on:before-enter="toggleBeforeEnter" v-on:enter="toggleEnter"
+                    v-on:before-leave="toggleBeforeLeave" v-on:leave="toggleLeave">
+            <div class="toggle" v-if="!collapsed">
+                <div class="body">
+                    <form class="two-cols">
+
+                        <label for="input-title">Title</label>
+                        <input id="input-title" type="text" v-model="title">
+
+                        <label for="input-blabla">Body</label>
+                        <textarea id="input-blabla" v-model="body" rows="4"></textarea>
+
+                        <label for="input-btn-ok">Positive button</label>
+                        <input id="input-btn-ok" type="text" v-model="btnOk">
+
+                        <label for="input-btn-cancel">Negative button</label>
+                        <input id="input-btn-cancel" type="text" v-model="btnCancel">
+
+                        <label for="input-dialog-width">Max-width</label>
+                        <input id="input-dialog-width" type="number" v-model="dialogWidth">
+
+                    </form>
+                </div>
+            </div>
+        </transition>
+    </div>
+
+    <h2>Resulting dialog</h2>
+    <div class="result">
+
+        <div class="dialog" v-bind:style="{ maxWidth: dialogWidth + 'px' }">
+            <div class="header">
+                <div class="x"></div>
+                <div class="title">{{ title }}</div>
+            </div>
+            <div class="body">
+                <div class="text">
+                    <p v-for="p in body.split('\n')" v-if="p">{{ p }}</p>
+                </div>
+                <div class="buttons">
+                    <div v-if="btnOk" class="button button-ok">
+                        <div class="inner">{{btnOk}}</div>
+                    </div>
+                    <div v-if="btnCancel" class="button button-cancel">{{btnCancel}}</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+    var app = new Vue({
+        el: '#app',
+        data: {
+            style: 'win7',
+            title: 'Sample App',
+            body: 'It looks like you haven\'t provided a body.\nTry now !',
+            btnOk: 'OK',
+            btnCancel: 'Cancel',
+            dialogWidth: 445,
+            collapsed: true,
+            show: false
+        },
+        methods: {
+            /* TOGGLE animation, inspired from https://codepen.io/ktsn/pen/dzNRjx */
+            toggleBeforeEnter: function (el) {
+                el.style.height = '0';
+            },
+            toggleEnter: function (el) {
+                el.style.height = el.scrollHeight + 'px';
+            },
+            toggleBeforeLeave: function (el) {
+                el.style.height = el.scrollHeight + 'px';
+            },
+            toggleLeave: function (el) {
+                el.style.height = '0';
+            }
+        }
+    })
+</script>
+</body>
+</html>

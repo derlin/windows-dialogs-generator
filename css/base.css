@@ -1,0 +1,76 @@
+/* ===========================================
+ * == GENERAL
+ * =========================================== */
+
+/* ===== forms */
+
+form.two-cols {
+    display: grid !important;
+    grid-template-columns: 1fr minmax(0, 3fr);
+    grid-gap: 10px;
+    align-items: center;
+}
+
+@media (min-width: 600px) {
+
+    form.two-cols {
+        grid-template-columns: 120px auto;
+    }
+}
+
+form.two-cols *:nth-child(2n-1) {
+    text-align: right;
+}
+
+input {
+    border-radius: 3px;
+}
+
+
+input, textarea, select {
+    display: block;
+    padding: .3rem .75rem;
+    font-size: 1rem;
+    line-height: 1.2;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+select {
+    /* Even on the latest Chrome as of 11/21/17 it still seems necessary to set a fixed height on the select. */
+    height: calc(2rem + 2px);
+}
+
+input:focus, textarea:focus, select:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
+}
+
+/*=== toggle */
+
+.toggle {
+    transition: all .5s;
+    overflow: hidden;
+}
+
+/*=== titles */
+
+h2 {
+    margin: 2rem 0;
+}
+
+/* ===========================================
+ * == INDEX specific
+ * =========================================== */
+
+.customize {
+    margin: 30px auto;
+    min-height: 0 !important;
+}
