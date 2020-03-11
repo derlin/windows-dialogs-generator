@@ -1,0 +1,89 @@
+/*
+style based on
+https://lh3.googleusercontent.com/proxy/ze4-IeDfl-MEOSxHGEMaHXM7M0ad_ZpBQY7Xb1sH3mKhFXfBbVpFYvoRlVf0wdNLGbPUuJiBx67vqPHkj93vPlV3fXYXBidMDpdJJMGrzs5Gp728E79wgGw75v6aO-xNp3-igp7vnyjgSAOT4fMc2b2mbioFYAb_5Q
+*/
+
+@font-face {
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Segoe UI'), url('../fonts/segoe-ui.woff') format('woff');
+}
+
+.win10 .dialog {
+    min-height: 100px;
+    margin: auto;
+    padding: 5px;
+    position: relative;
+    font-family: "Segoe UI";
+    background: #6badf7;
+}
+
+
+.win10 .dialog .header {
+    background: transparent;
+    height: 25px;
+    margin-top: -3px;
+    color: #52565a;
+    padding-left: 5px;
+    text-align: center;
+}
+
+.win10 .dialog .header .x:before {
+    content: '✕';
+}
+
+.win10 .dialog .header .x {
+    width: 35px;
+    height: 17px;
+    position: absolute;
+    top: 0;
+    right: 5px;
+    background: #cc5258;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+
+.win10 .dialog .body {
+    background-color: #f0f0f0;
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.win10 .dialog .body .text {
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.win10 .dialog .text p {
+    margin: 10px;
+}
+
+.win10 .dialog .body .buttons {
+    text-align: right;
+    font-size: .9em;
+}
+
+.win10 .dialog .body .button {
+    display: inline-block;
+    text-align: center;
+    width: 90px;
+    margin: 5px;
+    padding: 1px;
+    border: 1px solid #989898;
+}
+
+.win10 .dialog .body .button-ok {
+    box-shadow: inset 0 0 5px 0px #87b0c9;
+    border-color: #4797c7;
+}
+
+.win10 .dialog .body .button-ok .inner {
+    border: 1px dotted #444;
+}
