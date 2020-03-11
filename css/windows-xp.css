@@ -69,7 +69,7 @@ https://i.stack.imgur.com/l3Xew.png
 
 .winxp .dialog .body {
     display: flex;
-    padding: 20px 10px 10px 10px;
+    padding: 10px;
     text-align: center;
     flex-direction: column;
 }
