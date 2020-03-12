@@ -17,10 +17,10 @@ https://docs.microsoft.com/en-us/windows/win32/shell/images/hideaccessxp.png
 
 .dunno .dialog .header {
   background: #0465ff;
-  height: 30px;
+  height: 25px;
   color: white;
-  font-weight: bold;
-  padding: 6px 10px 0 10px;
+  font-weight: 500;
+  padding: 8px 4px 0 8px;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
@@ -30,45 +30,21 @@ https://docs.microsoft.com/en-us/windows/win32/shell/images/hideaccessxp.png
 }
 
 .dunno .dialog .header .x {
-  font-size: 20px;
+  text-shadow: 1px 0 white, 0 1px white, 0 -1px white, -1px 0 white;
+  font-size: 16px;
   text-align: center;
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   background-color: red;
   color: white;
   border: 2px solid white;
   border-radius: 4px;
   float: right;
+  margin-top: -4px;
 }
 
-.dunno .dialog .body {
-  display: flex;
-  padding: 20px 10px 10px 10px;
-  text-align: center;
-  flex-direction: column;
-}
-
-.dunno .dialog .body .text {
-  margin-bottom: 15px;
-}
-
-.dunno .dialog .text p {
-  margin: 5px;
-}
-
-.dunno .dialog .text p:last-child {
-  margin: 0;
-}
-
-.dunno .dialog .body .buttons {
-  text-align: center;
-}
 
 .dunno .dialog .body .button {
-  display: inline-block;
-  width: 100px;
-  margin: 5px 10px;
-  padding: 3px;
   border-style: outset;
 }
 

@@ -87,21 +87,10 @@ https://www.howtogeek.com/wp-content/uploads/2009/11/Delete.png
 }
 
 .win7 .dialog .body {
+    text-align: left;
     background-color: #f0f0f0;
-    display: flex;
-    padding: 10px;
-    flex-direction: column;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
-}
-
-.win7 .dialog .body .text {
-    text-align: left;
-    margin-bottom: 5px;
-}
-
-.win7 .dialog .text p {
-    margin: 10px;
 }
 
 .win7 .dialog .body .buttons {
@@ -110,10 +99,6 @@ https://www.howtogeek.com/wp-content/uploads/2009/11/Delete.png
 }
 
 .win7 .dialog .body .button {
-    display: inline-block;
-    text-align: center;
-    width: 90px;
-    margin: 5px;
     padding: 2px 0;
     border-radius: 3px;
     border: 1px solid #6d6d6d;

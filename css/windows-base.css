@@ -1,0 +1,26 @@
+.dialog .body {
+    display: flex;
+    padding: 10px;
+    text-align: center;
+    flex-direction: column;
+}
+
+.dialog .body .text {
+    margin-bottom: 5px;
+}
+
+.dialog .text p {
+    margin: 10px;
+}
+
+.dialog .body .buttons {
+    text-align: center;
+}
+
+.dialog .body .button {
+    display: inline-block;
+    text-align: center;
+    width: 90px;
+    margin: 5px;
+    padding: 3px;
+}

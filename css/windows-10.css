@@ -49,20 +49,7 @@ https://lh3.googleusercontent.com/proxy/ze4-IeDfl-MEOSxHGEMaHXM7M0ad_ZpBQY7Xb1sH
 
 .win10 .dialog .body {
     background-color: #f0f0f0;
-    display: flex;
-    padding: 10px;
-    flex-direction: column;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-}
-
-.win10 .dialog .body .text {
     text-align: left;
-    margin-bottom: 5px;
-}
-
-.win10 .dialog .text p {
-    margin: 10px;
 }
 
 .win10 .dialog .body .buttons {
@@ -71,16 +58,12 @@ https://lh3.googleusercontent.com/proxy/ze4-IeDfl-MEOSxHGEMaHXM7M0ad_ZpBQY7Xb1sH
 }
 
 .win10 .dialog .body .button {
-    display: inline-block;
-    text-align: center;
-    width: 90px;
-    margin: 5px;
     padding: 1px;
     border: 1px solid #989898;
 }
 
 .win10 .dialog .body .button-ok {
-    box-shadow: inset 0 0 5px 0px #87b0c9;
+    box-shadow: inset 0 0 5px 0 #87b0c9;
     border-color: #4797c7;
 }
 
