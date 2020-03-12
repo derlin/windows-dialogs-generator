@@ -20,7 +20,12 @@
 .dialog .body .button {
     display: inline-block;
     text-align: center;
-    width: 90px;
+    min-width: 90px;
     margin: 5px;
     padding: 3px;
+}
+
+.dialog .body .button .inner, .dialog .body .button-cancel {
+    padding-left: 8px;
+    padding-right: 8px;
 }

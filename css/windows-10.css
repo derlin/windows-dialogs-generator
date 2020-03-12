@@ -58,13 +58,15 @@ https://lh3.googleusercontent.com/proxy/ze4-IeDfl-MEOSxHGEMaHXM7M0ad_ZpBQY7Xb1sH
 }
 
 .win10 .dialog .body .button {
-    padding: 1px;
+    padding-top: 1px;
+    padding-bottom: 1px;
     border: 1px solid #989898;
 }
 
 .win10 .dialog .body .button-ok {
     box-shadow: inset 0 0 5px 0 #87b0c9;
     border-color: #4797c7;
+    padding: 1px;
 }
 
 .win10 .dialog .body .button-ok .inner {

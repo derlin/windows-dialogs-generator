@@ -58,7 +58,9 @@ https://lh3.googleusercontent.com/proxy/PPqIofq-8GVKJ_W3iq8Y31HxXSmVvHRFgCAbaPN6
 }
 
 .win95 .dialog .body .button.button-ok .inner {
-  padding: 2px;
+  /* ensure same height for both buttons */
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .win95 .dialog .body .button.button-ok {
