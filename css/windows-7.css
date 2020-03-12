@@ -61,11 +61,11 @@ https://www.howtogeek.com/wp-content/uploads/2009/11/Delete.png
 
 /*  == X in pure CSS == */
 
-.win7.pure-css  .dialog .header .x:before {
+.win7.pure-css .dialog .header .x:before {
     content: '✕';
 }
 
-.win7.pure-css  .dialog .header .x {
+.win7.pure-css .dialog .header .x {
     width: 44px;
     height: 16px;
     position: absolute;

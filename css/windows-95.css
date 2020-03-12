@@ -1,0 +1,101 @@
+/*
+style based on
+https://lh3.googleusercontent.com/proxy/PPqIofq-8GVKJ_W3iq8Y31HxXSmVvHRFgCAbaPN6oIJ9sAfCRvnaYYZmxCMKEevuHN1S8G-0qGVWlnDbKN0WN7FS
+*/
+
+@font-face {
+  font-family: 'MS Sans Serif';
+  font-style: normal;
+  font-weight: normal;
+  src: local('MS Sans Serif'), url('../fonts/ms-sans-serif.ttf') format('ttf');
+}
+
+.win95 .dialog {
+  background-color: #bfb8bf;
+  min-height: 100px;
+  margin: auto;
+  font-family: "MS Sans Serif";
+  border-width: 2px;
+}
+
+.win95 .dialog, .win95 .dialog .header .x {
+  border-style: outset solid solid outset;
+  border-bottom-color: #444;
+  border-right-color: #555;
+}
+
+.win95 .dialog .header {
+  background: #01007f;
+  height: 20px;
+  color: white;
+  font-weight: bold;
+  padding: 2px 4px;
+  margin: 2px;
+}
+
+.win95 .dialog .header .x:before {
+    content: '✕';
+}
+
+.win95 .dialog .header .x {
+  float: right;
+  width: 15px;
+  height: 15px;
+  font-size: 14px;
+  text-align: center;
+  background-color: #bfb8bf;
+  color: black;
+  border-width: 1px;
+  margin-top: 1px;
+}
+
+.win95 .dialog .body {
+  display: flex;
+  padding: 20px 10px 10px 10px;
+  text-align: center;
+  flex-direction: column;
+}
+
+.win95 .dialog .body .text {
+  margin-bottom: 15px;
+}
+
+.win95 .dialog .text p {
+  margin: 5px;
+}
+
+.win95 .dialog .text p:last-child {
+  margin: 0;
+}
+
+.win95 .dialog .body .buttons {
+  text-align: center;
+}
+
+.win95 .dialog .body .button {
+  display: inline-block;
+  width: 100px;
+  margin: 5px 10px;
+  padding: 3px;
+  /*border-style: outset solid solid outset;*/
+  /*border-bottom-color: #252325;*/
+  /*border-right-color: #444044;*/
+  /*border-width: 2px;*/
+}
+
+.win95 .dialog .body .button-cancel,
+.win95 .dialog .body .button-ok .inner {
+  border-style: outset solid solid outset;
+  border-bottom-color: #252325;
+  border-right-color: #444044;
+  border-width: 2px;
+}
+
+.win95 .dialog .body .button.button-ok .inner {
+  padding: 2px;
+}
+
+.win95 .dialog .body .button.button-ok {
+  border: 1px solid black;
+  padding: 0;
+}
