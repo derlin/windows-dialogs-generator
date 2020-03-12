@@ -58,6 +58,14 @@
                         <label for="input-blabla">Body</label>
                         <textarea id="input-blabla" v-model="body" rows="4"></textarea>
 
+                        <label for="input-align">Text align</label>
+                        <select id="input-align" v-model="textAlign">
+                            <option value="inherit">default</option>
+                            <option value="center">center</option>
+                            <option value="left">left</option>
+                            <option value="justify">justify</option>
+                        </select>
+
                         <label for="input-btn-ok">Positive button</label>
                         <input id="input-btn-ok" type="text" v-model="btnOk">
 
@@ -82,7 +90,7 @@
                 <div class="title">{{ title }}</div>
             </div>
             <div class="body">
-                <div class="text">
+                <div class="text" v-bind:style="{ textAlign: textAlign }">
                     <p v-for="p in body.split('\n')" v-if="p">{{ p }}</p>
                 </div>
                 <div class="buttons">
@@ -106,6 +114,7 @@
             style: 'win7',
             title: 'Sample App',
             body: 'It looks like you haven\'t provided a body.\nTry now !',
+            textAlign: 'inherit',
             btnOk: 'OK',
             btnCancel: 'Cancel',
             dialogWidth: 445,
